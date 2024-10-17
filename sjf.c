@@ -19,7 +19,7 @@ calTime(struct Process p[],int n){
         int minBustTime = -1;
 
         for(int i = 0; i < n; i++){
-            if(p[i].AT <= completed && !p[i].isCT){
+            if(p[i].AT <= currentTime && !p[i].isCT){
                 if(minBustTime == -1 || p[i].BT < minBustTime){
                     minBustTime = p[i].BT;
                     shortestJob = i;
@@ -66,5 +66,5 @@ int main(){
     }
 
     calTime(p,n);
-    return 0;
+    return 0;
 }
